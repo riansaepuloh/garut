@@ -1,0 +1,20 @@
+CATATAN COMMAND
+------------------------------
+1. membuat project laravel baru
+	composer create-project --prefer-dist laravel/laravel namaprojet
+2. untuk membuat url localhost:8000
+	php artisan serve
+3. untuk membuat model beserta migration
+	php artisan make:model nama_model -m
+4. membuat controller
+	php artisan make:controller nama_controller
+5. migrasi
+	php artisan migrate
+6. membuat login
+	php artisan make:auth
+7. membuat controller
+	php artisan make:controller NamaController
+	jika ingin beserta reouce nya maka :
+	php artisan make:controller NamaController --resource
+	jika ingin + model maka
+	php artisan make:controller NamaController --resource --model=Nama
