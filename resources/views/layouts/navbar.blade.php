@@ -16,8 +16,10 @@
         <p>Please wait...</p>
     </div>
 </div>
+
 <!-- Overlay For Sidebars -->
 <div class="overlay"></div>
+
 <!-- #Float icon -->
 <ul id="f-menu" class="mfb-component--br mfb-zoomin" data-mfb-toggle="hover">
     <li class="mfb-component__wrap"> <a href="#" class="mfb-component__button--main"> <i class="mfb-component__main-icon--resting zmdi zmdi-plus"></i> <i class="mfb-component__main-icon--active zmdi zmdi-close"></i> </a>
@@ -28,12 +30,14 @@
         </ul>
     </li>
 </ul>
+
 <!-- Search  -->
 <div class="search-bar">
     <div class="search-icon"> <i class="material-icons">search</i> </div>
     <input type="text" placeholder="START TYPING...">
     <div class="close-search"> <i class="material-icons">close</i> </div>
 </div>
+
 <!-- Top Bar -->
 <nav class="navbar">
     <div class="container-fluid">
@@ -112,31 +116,31 @@
                             <ul class="menu tasks">
                                 <li> <a href="javascript:void(0);">
                                     <h4> Footer display issue <small>72%</small> </h4>
-                                    <div class="progressbar-xs progress-rounded progress-striped progress ng-isolate-scope">
+                                    <div class="progressbar-xs progress-rounded progress-striped progress ng-isolate-scope" value="72" type="danger">
                                         <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100" style="width: 68%;"></div>
                                     </div>
                                     </a> </li>
                                 <li> <a href="javascript:void(0);">
                                     <h4> Make new buttons <small>56%</small> </h4>
-                                    <div class="progressbar-xs progress-rounded progress-striped progress ng-isolate-scope">
+                                    <div class="progressbar-xs progress-rounded progress-striped progress ng-isolate-scope" value="56" type="danger">
                                         <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="56" aria-valuemin="0" aria-valuemax="100" style="width: 68%;"></div>
                                     </div>
                                     </a> </li>
                                 <li> <a href="javascript:void(0);">
                                     <h4> Create new dashboard <small>68%</small> </h4>
-                                    <div class="progressbar-xs progress-rounded progress-striped progress ng-isolate-scope">
+                                    <div class="progressbar-xs progress-rounded progress-striped progress ng-isolate-scope" value="68" type="danger">
                                         <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" style="width: 68%;"></div>
                                     </div>
                                     </a> </li>
                                 <li> <a href="javascript:void(0);">
                                     <h4> Solve transition issue <small>77%</small> </h4>
-                                    <div class="progressbar-xs progress-rounded progress-striped progress ng-isolate-scope">
+                                    <div class="progressbar-xs progress-rounded progress-striped progress ng-isolate-scope" value="77" type="danger">
                                         <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="77" aria-valuemin="0" aria-valuemax="100" style="width: 68%;"></div>
                                     </div>
                                     </a> </li>
                                 <li> <a href="javascript:void(0);">
                                     <h4> Answer GitHub questions <small>87%</small> </h4>
-                                    <div class="progressbar-xs progress-rounded progress-striped progress ng-isolate-scope">
+                                    <div class="progressbar-xs progress-rounded progress-striped progress ng-isolate-scope" value="87" type="danger">
                                         <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="87" aria-valuemin="0" aria-valuemax="100" style="width: 68%;"></div>
                                     </div>
                                     </a> </li>
@@ -146,37 +150,15 @@
                     </ul>
                 </li>
                 <li><a href="{{ route('logout') }}" class="mega-menu" data-close="true" onclick="event.preventDefault();
-                                 document.getElementById('logout-form').submit();"><i class="zmdi zmdi-power"></i></a></li>
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                        {{ csrf_field() }}
-                    </form>
+                    document.getElementById('logout-form').submit();"><i class="zmdi zmdi-power"></i></a></li>
+                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    {{ csrf_field() }}
+                </form>
+
                 <li class="pull-right"><a href="javascript:void(0);" class="js-right-sidebar" data-close="true"><i class="zmdi zmdi-sort-amount-desc"></i></a></li>
             </ul>
         </div>
     </div>
 </nav>
-<!-- Left & Right bar menu -->
-<section> 
-    <!-- Left Sidebar -->
-    <aside id="leftsidebar" class="sidebar"> 
-        <!-- User Info -->
-        <div class="user-info">
-            <div class="image"> <img src="assets/images/random-avatar1.jpg" width="48" height="48" alt="User" /> </div>
-            <div class="info-container">
-                <div class="name" data-toggle="dropdown">John Doe</div>
-                <div class="email">john.doe@example.com</div>
-                <div class="btn-group user-helper-dropdown"> <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">keyboard_arrow_down</i>
-                    <ul class="dropdown-menu pull-right">
-                        <li><a href="profile.html"><i class="material-icons">person</i>Profile</a></li>
-                        <li class="divider"></li>
-                        <li><a href="javascript:void(0);"><i class="material-icons">group</i>Followers</a></li>
-                        <li><a href="javascript:void(0);"><i class="material-icons">shopping_cart</i>Sales</a></li>
-                        <li><a href="javascript:void(0);"><i class="material-icons">favorite</i>Likes</a></li>
-                        <li class="divider"></li>
-                        <li><a href="{{ route('logout') }}"><i class="material-icons">input</i>Sign Out</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <!-- #User Info --> 
 @endsection
+

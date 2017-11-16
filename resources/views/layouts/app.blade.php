@@ -21,8 +21,12 @@
 </head>
 <body class="theme-red">
 @yield('navbar')
-@yield('menu')
+<section>
+@yield('leftbar')
+</section>
+<section class="content">
 @yield('content')
+</section>
 <!-- Jquery Core Js --> 
 <script src="{{ URL::asset('assets/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js')}}"></script> <!-- JVectorMap Plugin Js --> 
 <script src="{{ URL::asset('assets/plugins/jvectormap/jquery-jvectormap-world-mill-en.js')}}"></script> <!-- JVectorMap Plugin Js --> 
@@ -35,12 +39,6 @@
 <script src="{{ URL::asset('assets/js/pages/index.js')}}"></script>
 <script src="{{ URL::asset('assets/js/pages/maps/jvectormap.js')}}"></script> 
 <script src="{{ URL::asset('assets/js/pages/charts/jquery-knob.js')}}"></script>
-<script type="text/javascript">
-
-    AOS.init({
-        easing: 'ease-in-out-sine'
-    });
-</script>
 <!-- Jquery Core Js --> 
 <script src="{{ URL::asset('assets/bundles/libscripts.bundle.js')}}"></script> <!-- Lib Scripts Plugin Js -->
 <script src="{{ URL::asset('assets/bundles/vendorscripts.bundle.js')}}"></script> <!-- Lib Scripts Plugin Js --> 
