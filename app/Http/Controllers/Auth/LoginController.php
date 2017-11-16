@@ -36,4 +36,12 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
+    public function forget(){
+        return view('auth.passwords.email');
+    }
+
+    public function reset(){
+        return view('auth.passwords.reset');
+    }
 }

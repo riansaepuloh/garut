@@ -1,97 +1,51 @@
+
 <!DOCTYPE html>
 <html>
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <title>Igarut</title>
-    <!-- Favicon-->
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+<title>:: AdminCC ::</title>
+<!-- Favicon-->
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<!-- Font Icon -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+<link href="{{ URL::asset('assets/plugins/aos-animation/aos.css') }}" rel="stylesheet">
+<!-- Custom Css -->
+<link href="{{ URL::asset('assets/css/main.css') }}" rel="stylesheet">
+<!-- themes Css -->
+<link href="{{ URL::asset('assets/css/themes/all-themes.css') }}" rel="stylesheet" />
+<!-- css Login -->
+<link href="{{ URL::asset('assets/css/login.css') }}" rel="stylesheet">
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
-
-    <!-- Bootstrap Core Css -->
-    <link href="{{ asset('plugins/bootstrap/css/bootstrap.css') }}" rel="stylesheet">
-
-    <!-- Waves Effect Css -->
-    <link href="{{ asset('plugins/node-waves/waves.css') }}" rel="stylesheet" />
-
-    <!-- Animation Css -->
-    <link href="{{ asset('plugins/animate-css/animate.css') }}" rel="stylesheet" />
-
-    <!-- Morris Chart Css-->
-    <link href="{{ asset('plugins/morrisjs/morris.css') }}" rel="stylesheet" />
-
-    <!-- Custom Css -->
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-
-    <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
-    <link href="{{ asset('css/themes/all-themes.css') }}" rel="stylesheet" />
 </head>
-
 <body class="theme-red">
-    
-    <!-- #END# Page Loader -->
-    <!-- Overlay For Sidebars -->
-    <div class="overlay"></div>
-    <!-- #END# Overlay For Sidebars -->
-    <!-- Search Bar -->
-    <div class="search-bar">
-        <div class="search-icon">
-            <i class="material-icons">search</i>
-        </div>
-        <input type="text" placeholder="START TYPING...">
-        <div class="close-search">
-            <i class="material-icons">close</i>
-        </div>
-    </div>
-    <!-- #END# Search Bar -->
+@yield('navbar')
+@yield('menu')
+@yield('content')
+<!-- Jquery Core Js --> 
+<script src="{{ URL::asset('assets/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js')}}"></script> <!-- JVectorMap Plugin Js --> 
+<script src="{{ URL::asset('assets/plugins/jvectormap/jquery-jvectormap-world-mill-en.js')}}"></script> <!-- JVectorMap Plugin Js --> 
+<script src="{{ URL::asset('assets/plugins/jquery-sparkline/jquery.sparkline.js')}}"></script> <!-- Sparkline Plugin Js -->
+<script src="{{ URL::asset('assets/plugins/jquery-countto/jquery.countTo.js')}}"></script> <!-- Jquery CountTo Plugin Js --> 
+<script src="{{ URL::asset('assets/bundles/flotscripts.bundle.js')}}"></script><!-- Flot Charts Plugin Js --> 
+<script src="{{ URL::asset('assets/bundles/morrisscripts.bundle.js')}}"></script><!-- Morris Plugin Js -->
+<script src="{{ URL::asset('assets/plugins/jquery-knob/jquery.knob.min.js')}}"></script> <!-- Jquery Knob Plugin Js -->
+<script src="{{ URL::asset('assets/plugins/aos-animation/aos.js')}}"></script> <!-- AOS Animation -->
+<script src="{{ URL::asset('assets/js/pages/index.js')}}"></script>
+<script src="{{ URL::asset('assets/js/pages/maps/jvectormap.js')}}"></script> 
+<script src="{{ URL::asset('assets/js/pages/charts/jquery-knob.js')}}"></script>
+<script type="text/javascript">
 
-
-     <!-- Jquery Core Js -->
-    <script src="{{ asset('plugins/jquery/jquery.min.js') }}"></script>
-
-    <!-- Bootstrap Core Js -->
-    <script src="{{ asset('plugins/bootstrap/js/bootstrap.js') }}"></script>
-
-    <!-- Select Plugin Js -->
-    <script src="{{ asset('plugins/bootstrap-select/js/bootstrap-select.js') }}"></script>
-
-    <!-- Slimscroll Plugin Js -->
-    <script src="{{ asset('plugins/jquery-slimscroll/jquery.slimscroll.js') }}"></script>
-
-    <!-- Waves Effect Plugin Js -->
-    <script src="{{ asset('plugins/node-waves/waves.js') }}"></script>
-
-    <!-- Jquery CountTo Plugin Js -->
-    <script src="{{ asset('plugins/jquery-countto/jquery.countTo.js') }}"></script>
-
-    <!-- Morris Plugin Js -->
-    <script src="{{ asset('plugins/raphael/raphael.min.js') }}"></script>
-    <script src="{{ asset('plugins/morrisjs/morris.js') }}"></script>
-
-    <!-- ChartJs -->
-    <script src="{{ asset('plugins/chartjs/Chart.bundle.js') }}"></script>
-
-    <!-- Flot Charts Plugin Js -->
-    <script src="{{ asset('plugins/flot-charts/jquery.flot.js') }}"></script>
-    <script src="{{ asset('plugins/flot-charts/jquery.flot.resize.js') }}"></script>
-    <script src="{{ asset('plugins/flot-charts/jquery.flot.pie.js') }}"></script>
-    <script src="{{ asset('plugins/flot-charts/jquery.flot.categories.js') }}"></script>
-    <script src="{{ asset('plugins/flot-charts/jquery.flot.time.js') }}"></script>
-
-    <!-- Sparkline Chart Plugin Js -->
-    <script src="{{ asset('plugins/jquery-sparkline/jquery.sparkline.js') }}"></script>
-
-    <!-- Custom Js -->
-    <script src="{{ asset('js/admin.js') }}"></script>
-    <script src="{{ asset('js/pages/index.js') }}"></script>
-
-    <!-- Demo Js -->
-    <script src="{{ asset('js/demo.js') }}"></script>
+    AOS.init({
+        easing: 'ease-in-out-sine'
+    });
+</script>
+<!-- Jquery Core Js --> 
+<script src="{{ URL::asset('assets/bundles/libscripts.bundle.js')}}"></script> <!-- Lib Scripts Plugin Js -->
+<script src="{{ URL::asset('assets/bundles/vendorscripts.bundle.js')}}"></script> <!-- Lib Scripts Plugin Js --> 
+<script src="{{ URL::asset('assets/plugins/css-gradientify/gradientify.min.js')}}"></script><!-- Gradientify Js -->
+<script src="{{ URL::asset('assets/bundles/mainscripts.bundle.js')}}"></script><!-- Custom Js --> 
+@yield('scripts')
 </body>
-
 </html>
