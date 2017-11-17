@@ -263,3 +263,27 @@
 .theme-blush .inbox-widget .inbox-inner:hover .inbox-img img{border:2px solid #dd5e89;transition:all 150ms linear;}
 .theme-blush .card .header::after { content: ''; display: block;width: 0;height:1px;background: #f7bb97;transition: width .5s;position: relative;top: 11px;}
 .theme-blush .card:hover .header::after {width: 100%;transition: width .5s;}
+
+.bthapus{
+  border:none;
+  outline:none;
+  background:none;
+  cursor:pointer;
+  color:#e4072e;
+  padding:0;
+  text-decoration:underline;
+  font-family:inherit;
+  font-size:inherit;
+}
+
+.btedit{
+  border:none;
+  outline:none;
+  background:none;
+  cursor:pointer;
+  color:#362cbd;
+  padding:0;
+  text-decoration:underline;
+  font-family:inherit;
+  font-size:inherit;
+}

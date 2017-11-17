@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\DB;
 use App\Kecamatan;
 use Illuminate\Http\Request;
 
@@ -14,7 +15,8 @@ class KecamatanController extends Controller
      */
     public function index()
     {
-        //
+        $kecamatan1 = kecamatan::all();
+        return view('kecamatan.index',compact('kecamatan1'));
     }
 
     /**
@@ -24,7 +26,7 @@ class KecamatanController extends Controller
      */
     public function create()
     {
-        //
+        return view('kecamatan.create');
     }
 
     /**
@@ -35,7 +37,11 @@ class KecamatanController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $kecamatan1 = kecamatan::all();
+        kecamatan::create([
+            'nama_kecamatan' => request('nama_kecamatan')
+        ]);
+        return redirect()->route('kecamatan');
     }
 
     /**
@@ -55,9 +61,10 @@ class KecamatanController extends Controller
      * @param  \App\Kecamatan  $kecamatan
      * @return \Illuminate\Http\Response
      */
-    public function edit(Kecamatan $kecamatan)
+    public function edit($kecamatan)
     {
-        //
+        $kecamatan1 = Kecamatan::find($kecamatan);
+        return view('kecamatan.edit',compact('kecamatan1'));
     }
 
     /**
@@ -67,9 +74,14 @@ class KecamatanController extends Controller
      * @param  \App\Kecamatan  $kecamatan
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Kecamatan $kecamatan)
+    public function update($kecamatan)
     {
-        //
+        $kecamatan1 = kecamatan::find($kecamatan);
+        $kecamatan1->update([
+            'kd_kecamatan' => request('kd_kecamatan'),
+            'nama_kecamatan' => request('nama_kecamatan')
+        ]);
+        return redirect()->route('kecamatan')->with('success', 'Berhasil Mengubah Data');
     }
 
     /**
@@ -78,8 +90,11 @@ class KecamatanController extends Controller
      * @param  \App\Kecamatan  $kecamatan
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Kecamatan $kecamatan)
+    public function destroy($kecamatan)
     {
-        //
+        $kecamatan1 = Kecamatan::find($kecamatan);
+        $kecamatan1->delete();
+        // 
+        return redirect()->route('kecamatan')->with('success', 'Berhasil Menghapus Data');
     }
 }
